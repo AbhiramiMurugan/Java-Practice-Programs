@@ -1,0 +1,16 @@
+public class PrintMiddleCharacterinString {
+
+	public static void main(String[] args) {
+		String str = "abcdef";
+		char s[] = str.toCharArray();
+		int count = str.length() / 2;
+
+		if (count % 2 != 0) {
+			System.out.println(s[count - 1] + " " + s[count]);
+		} else {
+
+			System.out.println(s[count]);
+
+		}
+	}
+}
