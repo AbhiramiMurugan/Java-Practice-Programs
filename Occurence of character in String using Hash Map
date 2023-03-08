@@ -1,0 +1,23 @@
+import java.util.HashMap;
+
+public class OccurenceofCharacinStringusingHashmap {
+
+	public static void main(String[] args) {
+
+		String str = "google";
+		// HashMap char as a key and occurrence as a value
+		HashMap<Character, Integer> charCount = new HashMap<>();
+		char[] ch = str.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			if (charCount.containsKey(ch[i])) {
+				int count = charCount.get(ch[i]);
+				charCount.put(ch[i], ++count);
+			} else {
+				charCount.put(ch[i], 1);
+			}
+		}
+		System.out.println(charCount);
+
+	}
+
+}
