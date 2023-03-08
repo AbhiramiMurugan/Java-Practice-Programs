@@ -1,0 +1,17 @@
+public class MissingNumbersinArray {
+	public static int missingnumbers(int num[], int totalcount) {
+		int expsum = totalcount * ((totalcount + 1) / 2);
+		int actsum = 0;
+		for (int i : num) {
+			actsum+= i;
+		}
+		return expsum - actsum;
+
+	}
+
+	public static void main(String[] args) {
+		int num[] = { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
+		int n1 = missingnumbers(num, 9);
+		System.out.println(n1);
+	}
+}
